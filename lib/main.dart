@@ -82,10 +82,12 @@ class ChatyApp extends StatelessWidget {
         },
       ),
       theme: ThemeData(
-        pageTransitionsTheme: PageTransitionsTheme(builders: {
-          TargetPlatform.android: CustomPageTransitionsBuilder(),
-          TargetPlatform.iOS: CustomPageTransitionsBuilder(),
-        }),
+        pageTransitionsTheme: PageTransitionsTheme(
+          builders: {
+            TargetPlatform.android: CustomPageTransitionsBuilder(),
+            TargetPlatform.iOS: CustomPageTransitionsBuilder(),
+          },
+        ),
         fontFamily: 'OpenSans',
         colorScheme: ColorScheme.fromSwatch(
           primarySwatch: Colors.pink,
