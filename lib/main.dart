@@ -1,12 +1,12 @@
-import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter/material.dart';
 
-import './screens/splash_screens.dart';
-import './screens/chat_screen.dart';
 import './screens/auth_screen.dart';
-import './helpers/route_transition.dart';
+import './screens/chat_screen.dart';
+import './screens/splash_screens.dart';
+import 'theme/theme.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -81,24 +81,7 @@ class ChatyApp extends StatelessWidget {
           );
         },
       ),
-      theme: ThemeData(
-        pageTransitionsTheme: PageTransitionsTheme(
-          builders: {
-            TargetPlatform.android: CustomPageTransitionsBuilder(),
-            TargetPlatform.iOS: CustomPageTransitionsBuilder(),
-          },
-        ),
-        fontFamily: 'OpenSans',
-        colorScheme: ColorScheme.fromSwatch(
-          primarySwatch: Colors.pink,
-          accentColor: Colors.white,
-          backgroundColor: Colors.pink[200],
-          cardColor: Colors.pink.withOpacity(0.7),
-        ),
-        iconTheme: const IconThemeData(
-          color: Colors.white,
-        ),
-      ),
+      theme: theme,
     );
   }
 }
