@@ -11,4 +11,4 @@ PRODUCT_NAME = chatyy
 PRODUCT_BUNDLE_IDENTIFIER = com.deep.chatyy
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2022 com.deep. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2023 com.deep. All rights reserved.
