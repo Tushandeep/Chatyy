@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../helpers/route_transition.dart';
+import '../helpers/route_transition.dart';
 
 ThemeData get theme => ThemeData(
       pageTransitionsTheme: PageTransitionsTheme(
@@ -10,11 +10,20 @@ ThemeData get theme => ThemeData(
         },
       ),
       fontFamily: 'OpenSans',
-      colorScheme: ColorScheme.fromSwatch(
-        primarySwatch: Colors.pink,
-        accentColor: Colors.white,
-        backgroundColor: Colors.pink[200],
-        cardColor: Colors.pink.withOpacity(0.7),
+      colorScheme: const ColorScheme(
+        brightness: Brightness.light,
+        primary: Color(0xFF674188),
+        onPrimary: Colors.white,
+        secondary: Color(0xFFC3ACD0),
+        onSecondary: Colors.white,
+        tertiary: Color(0xFFF7EFE5),
+        onTertiary: Colors.white,
+        error: Colors.red,
+        onError: Colors.white,
+        background: Color(0xFFFFFBF5),
+        onBackground: Colors.white,
+        surface: Color(0xFF674188),
+        onSurface: Colors.white,
       ),
       iconTheme: const IconThemeData(
         color: Colors.white,
