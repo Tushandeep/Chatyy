@@ -11,11 +11,12 @@ import 'theme/theme.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  await Firebase.initializeApp();
+
   runApp(const ChatyApp());
 }
 
 Future<void> _initFirebase() async {
-  await Firebase.initializeApp();
   final fbm = FirebaseMessaging.instance;
   fbm.requestPermission();
 

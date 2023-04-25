@@ -29,6 +29,13 @@
             {
               "client_id": "745467305195-knlrfs6jg314795ms7gts5j6b1o0lqdv.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "745467305195-vrjfl1arn17t2quckt7q7m906d7jvn1u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.deep.chatyy"
+              }
             }
           ]
         }
