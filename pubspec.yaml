@@ -43,6 +43,9 @@ dependencies:
   image_picker:
   animate_do:
   flutter_local_notifications:
+  flutter_animate: ^4.1.1+1
+  get: ^4.6.5
+  equatable: ^2.0.5
 
 dev_dependencies:
   flutter_test:

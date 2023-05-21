@@ -2,8 +2,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-import './screens/auth_screen.dart';
+import 'controllers/auth.dart';
+import 'screens/auth/auth_screen.dart';
 import './screens/chat_screen.dart';
 import './screens/splash_screens.dart';
 import 'theme/theme.dart';
@@ -50,8 +52,24 @@ Future<void> _initFirebase() async {
   });
 }
 
-class ChatyApp extends StatelessWidget {
+class ChatyApp extends StatefulWidget {
   const ChatyApp({Key? key}) : super(key: key);
+
+  @override
+  State<ChatyApp> createState() => _ChatyAppState();
+}
+
+class _ChatyAppState extends State<ChatyApp> {
+  void _initControllers() {
+    Get.put<AuthController>(AuthController());
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    _initControllers();
+  }
 
   @override
   Widget build(BuildContext context) {
